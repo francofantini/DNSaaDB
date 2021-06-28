@@ -6,15 +6,41 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ./components/* ./pages/* ./utils/*",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "date-fns": "^2.22.1",
+    "modl-converter": "^0.0.9",
+    "modl-interpreter": "^0.0.13",
+    "nanoid": "^3.1.23",
     "next": "11.0.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.9.0",
+    "swr": "^0.5.6"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "babel-eslint": "^10.1.0",
     "eslint": "7.29.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-no-only-tests": "^2.5.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "generate-robotstxt": "^8.0.3",
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.4"
   }
 }
