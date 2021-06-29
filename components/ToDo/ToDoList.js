@@ -6,6 +6,8 @@ const ToDoList = () => {
     const { data } = useSWR("/api/vercel/dns");
 
     if (!data) return <Loading />;
+    if (!data.length) return <p>👋 List is empty</p>;
+
     return (
         <>
             {data

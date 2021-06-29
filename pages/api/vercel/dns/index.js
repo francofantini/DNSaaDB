@@ -13,9 +13,11 @@ const handler = async (req, res) => {
                 const txtRecords = dns.records
                     .filter((record) => record.type === "TXT")
                     .map((record) => {
-                        const { value, id } = record;
-                        return { ...interpreter.interpretToJsonObject(value), id };
-                    });
+                        const { value, id, name } = record;
+                        return { ...interpreter.interpretToJsonObject(value), id, hostname: `${name}.${domain}` };
+                    })
+                    .filter((record) => record.createdAt);
+
                 return res.json(txtRecords);
             case "POST":
                 if (!body.record) {
